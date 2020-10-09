@@ -22,3 +22,24 @@ h1 {
   text-align: center;
   font-size: 3rem;
 }
+
+.card {
+  width: 90vw;
+}
+
+@media (min-width: 500px) {
+  .card {
+    width: 30vw;
+  }
+}
+@media (min-width: 950px) {
+  .card {
+    width: 20vw;
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #ec3a49;
+}

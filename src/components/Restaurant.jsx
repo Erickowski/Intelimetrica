@@ -1,7 +1,30 @@
 import React from "react";
 
-const Restaurant = () => {
-  return <h1>Restaurante</h1>;
+const Restaurant = ({ restaurant }) => {
+  return (
+    <>
+      <div className="card border-primary m-2">
+        <div className="card-body">
+          <h4 className="card-title">{restaurant.name}</h4>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href={restaurant.contact.site} target="_blank">
+            <i class="fas fa-desktop"></i>
+          </a>
+          <a href={`mailto:${restaurant.contact.email}`} target="_blank">
+            <i class="fas fa-at"></i>
+          </a>
+          <a href={`tel:${restaurant.contact.phone}`} target="_blank">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Restaurant;

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 
 import Header from "./components/Header";
+import ListRestaurant from "./components/ListRestaurant";
 
 function App() {
-  const [restaurants, saveRestaurants] = useState({});
-  const [pages, savePages] = useState(0);
+  const [restaurants, saveRestaurants] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -13,11 +13,16 @@ function App() {
         "https://recruiting-datasets.s3.us-east-2.amazonaws.com/data_melp.json"
       );
       saveRestaurants(result.data);
-      savePages(result.data.length / 5);
     };
     getData();
   }, []);
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <h2 className="text-center mt-4">Encuentra tu restaurante favorito</h2>
+      <ListRestaurant restaurants={restaurants} />
+    </>
+  );
 }
 
 export default App;
