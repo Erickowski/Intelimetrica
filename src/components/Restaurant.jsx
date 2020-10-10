@@ -11,15 +11,27 @@ const Restaurant = ({ restaurant }) => {
             bulk of the card's content.
           </p>
         </div>
-        <div class="card-footer">
-          <a href={restaurant.contact.site} target="_blank">
-            <i class="fas fa-desktop"></i>
+        <div className="card-footer">
+          <a
+            href={restaurant.contact.site}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-desktop"></i>
           </a>
-          <a href={`mailto:${restaurant.contact.email}`} target="_blank">
-            <i class="fas fa-at"></i>
+          <a
+            href={`mailto:${restaurant.contact.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-at"></i>
           </a>
-          <a href={`tel:${restaurant.contact.phone}`} target="_blank">
-            <i class="fas fa-phone"></i>
+          <a
+            href={`tel:${restaurant.contact.phone}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-phone"></i>
           </a>
         </div>
       </div>

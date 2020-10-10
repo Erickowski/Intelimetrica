@@ -3,6 +3,7 @@ import Axios from "axios";
 
 import Header from "./components/Header";
 import ListRestaurant from "./components/ListRestaurant";
+import Formulario from "./components/Formulario";
 
 function App() {
   const [restaurants, saveRestaurants] = useState([]);
@@ -16,10 +17,12 @@ function App() {
     };
     getData();
   }, []);
+
   return (
     <>
       <Header />
       <h2 className="text-center mt-4">Encuentra tu restaurante favorito</h2>
+      <Formulario restaurants={restaurants} saveRestaurants={saveRestaurants} />
       <ListRestaurant restaurants={restaurants} />
     </>
   );
