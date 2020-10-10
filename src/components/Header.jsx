@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <header className="bg-alert">
         <Link to="/">
-          <h1>Melp</h1>
+          <h1>MELP</h1>
         </Link>
       </header>
       <h2 className="text-center mt-4">Encuentra tu restaurante favorito</h2>
