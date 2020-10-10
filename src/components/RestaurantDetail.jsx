@@ -80,7 +80,7 @@ const RestaurantDetail = ({ restaurants }) => {
         <h3>Restaurantes Recomendados en la Zona</h3>
         <div className="restaurants-recommended">
           {restaurantRecommended.map((restaurant, index) => {
-            if (index > 2) return;
+            if (index > 2) return null;
             return <Restaurant key={restaurant.id} restaurant={restaurant} />;
           })}
         </div>
