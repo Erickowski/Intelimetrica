@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import Header from "./components/Header";
 import ListRestaurant from "./components/ListRestaurant";
@@ -33,6 +38,9 @@ function App() {
         </Route>
         <Route exact path="/restaurant/:id">
           <RestaurantDetail restaurants={restaurants} />
+        </Route>
+        <Route path="*">
+          <Redirect to="/" />
         </Route>
       </Switch>
     </Router>
