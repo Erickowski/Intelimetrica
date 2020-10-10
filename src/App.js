@@ -21,7 +21,6 @@ function App() {
   return (
     <>
       <Header />
-      <h2 className="text-center mt-4">Encuentra tu restaurante favorito</h2>
       <Formulario restaurants={restaurants} saveRestaurants={saveRestaurants} />
       <ListRestaurant restaurants={restaurants} />
     </>

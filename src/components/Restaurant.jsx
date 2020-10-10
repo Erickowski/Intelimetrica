@@ -1,15 +1,68 @@
 import React from "react";
 
 const Restaurant = ({ restaurant }) => {
+  const showRating = (rating) => {
+    switch (rating) {
+      case 0:
+        return (
+          <>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+          </>
+        );
+      case 1:
+        return (
+          <>
+            <i className="fas fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+          </>
+        );
+      case 2:
+        return (
+          <>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="far fa-star"></i>
+            <i className="far fa-star"></i>
+          </>
+        );
+      case 3:
+        return (
+          <>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="far fa-star"></i>
+          </>
+        );
+      case 4:
+        return (
+          <>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+          </>
+        );
+      default:
+        return null;
+    }
+  };
   return (
     <>
       <div className="card border-primary m-2">
         <div className="card-body">
           <h4 className="card-title">{restaurant.name}</h4>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Rating: <span>{showRating(restaurant.rating)}</span>
           </p>
+          <button type="button" className="btn btn-primary">
+            Ver más
+          </button>
         </div>
         <div className="card-footer">
           <a
