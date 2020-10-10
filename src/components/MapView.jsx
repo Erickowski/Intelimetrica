@@ -12,7 +12,13 @@ const MapView = ({ actualRestaurant, restaurants }) => {
     (restaurant) => restaurant.id !== actualRestaurant[0].id
   );
   return (
-    <Map center={options} zoom={20} keyboard={false}>
+    <Map
+      center={options}
+      zoom={20}
+      keyboard={false}
+      touchZoom="center"
+      dragging={false}
+    >
       <TileLayer
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

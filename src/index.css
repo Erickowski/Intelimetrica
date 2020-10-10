@@ -1,3 +1,4 @@
+/* Globals */
 html {
   height: 100%;
 }
@@ -23,19 +24,14 @@ h1 {
   font-size: 3rem;
 }
 
-.card {
-  width: 90vw;
+/* Form */
+select.form-control {
+  width: 50%;
 }
 
-@media (min-width: 500px) {
-  .card {
-    width: 30vw;
-  }
-}
-@media (min-width: 950px) {
-  .card {
-    width: 20vw;
-  }
+/* Cards */
+.card {
+  width: 90vw;
 }
 
 .card-footer {
@@ -44,15 +40,35 @@ h1 {
   color: #ec3a49;
 }
 
-select.form-control {
-  width: 50%;
-}
-
 .card-text span {
   color: #ec3a49;
 }
 
+/* Map */
 .leaflet-container {
   height: 500px;
   max-width: 100%;
+}
+
+/* Restaurants recommended */
+.restaurants-recommended {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* MediasQueries */
+@media (min-width: 500px) {
+  .card {
+    width: 30vw;
+  }
+  .resume-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 950px) {
+  .card {
+    width: 20vw;
+  }
 }
