@@ -1,68 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ShowRating from "./ShowRating";
 
 const Restaurant = ({ restaurant }) => {
-  const showRating = (rating) => {
-    switch (rating) {
-      case 0:
-        return (
-          <>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-          </>
-        );
-      case 1:
-        return (
-          <>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-          </>
-        );
-      case 2:
-        return (
-          <>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
-            <i className="far fa-star"></i>
-          </>
-        );
-      case 3:
-        return (
-          <>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
-          </>
-        );
-      case 4:
-        return (
-          <>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-          </>
-        );
-      default:
-        return null;
-    }
-  };
   return (
     <>
       <div className="card border-primary m-2">
         <div className="card-body">
           <h4 className="card-title">{restaurant.name}</h4>
           <p className="card-text">
-            Rating: <span>{showRating(restaurant.rating)}</span>
+            Rating:{" "}
+            <span>
+              <ShowRating rating={restaurant.rating}></ShowRating>
+            </span>
           </p>
-          <button type="button" className="btn btn-primary">
+          <Link to={`/restaurant/${restaurant.id}`} className="btn btn-primary">
             Ver más
-          </button>
+          </Link>
         </div>
         <div className="card-footer">
           <a

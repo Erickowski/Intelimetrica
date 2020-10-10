@@ -1,6 +1,5 @@
 import React from "react";
 import Restaurant from "./Restaurant";
-import Spinner from "./Spinner";
 
 const ListRestaurant = ({ restaurants }) => {
   return (
