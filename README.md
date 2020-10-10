@@ -23,3 +23,5 @@ $ npm run build
 - Axios
 
 ## 💣 Despliegue
+
+https://erickowski.github.io/Intelim-trica/
