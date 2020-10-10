@@ -24,4 +24,4 @@ $ npm run build
 
 ## 💣 Despliegue
 
-https://erickowski.github.io/Intelim-trica/
+https://intelimetrica-6acfb.web.app/
