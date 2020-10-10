@@ -23,5 +23,6 @@ $ npm run build
 - Axios
 
 ## 💣 Despliegue
+https://erickowski.github.io/Intelimetrica/
 
-https://erickowski.github.io/Intelim-trica/
+https://intelimetrica-6acfb.web.app/
